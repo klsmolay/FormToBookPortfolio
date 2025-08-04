@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Portfolio</title>
+    <link rel="icon" href="./Portfolio-Builder.png" type="image/x-icon">
+</head>
+<body>
+    <style>
+/* Basic CSS Reset and Styling */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #1a1a1a;
+    --header-color: #007bff;
+    --accent-color: #007bff;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+/* Header Styling */
+.header {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin: 0;
+}
+.header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+/* Main Content Area for the Form */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    background-color: #e9ecef;
+}
+/* Styling for the iframe to make it responsive */
+.google-form-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px; /* Max width of the form */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.google-form-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* Responsive aspect ratio for the iframe */
+.google-form-wrapper::before {
+    content: "";
+    display: block;
+    /* This aspect ratio is calculated from your form's dimensions (2995/640) */
+    padding-top: 467.96%; 
+}
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+    </style>
+
+    <header class="header">
+        <h1>Book One For You</h1>
+        <p>please fill out the form.</p>
+    </header>
+
+        <section class="form-container">
+            <div class="google-form-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdv75j1JBoNY57CEv9XQccEDHO2AU7UV_MtCR1rTLYrVkKCwQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Build_Your_Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
